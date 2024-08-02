@@ -1,5 +1,6 @@
 
 import random
+import time
 
 # Function Generates the row of the slot machine symbols
 def spin_row():
@@ -66,6 +67,7 @@ def main():
         # Turning row into a list
         row = spin_row()
         print("Spinning......\n")
+        time.sleep(3)
         print_row(row)
 
         payout = get_payout(row, bet)
