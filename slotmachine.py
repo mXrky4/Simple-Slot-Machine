@@ -69,5 +69,12 @@ def main():
 
         payout = get_payout(row, bet)
 
+        if payout > 0:
+            print(f"You won RM{payout} ")
+        else:
+            print("Sorry you lost this round")
+
+        balance += payout
+
 if __name__ == '__main__':
     main()
