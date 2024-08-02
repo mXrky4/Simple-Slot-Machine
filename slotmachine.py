@@ -28,5 +28,20 @@ def get_payout(row, bet):
 
 # Game start
 def main():
-    pass
+    balance= 100
+    print("******************************************")
+    print("Welcome to the Python Slots!")
+    print("Symbols: 😁 - Smiley, 😎 - Cool, 😆 - Excited, 😏 - Smirk, 🤑 - Moneyface")
+    print("******************************************")
 
+    while balance > 0:
+        print(f"Current balance: RM{balance}")
+
+        bet =input("Make a bet (minimum RM5): ")
+
+        if not bet.isdigit():
+            print("Please enter a valid number.")
+            continue
+
+
+main()
