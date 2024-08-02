@@ -11,7 +11,7 @@ def spin_row():
 # Function: Prints the row that easy to read
 def print_row(row):
     # Adding a string, which is a "|" in between the symbols output
-    print("|".join(row))
+    print(" | ".join(row))
 
 # Function: Calculate the payout based on the row and bet
 def get_payout(row, bet):
