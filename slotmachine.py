@@ -56,7 +56,7 @@ def main():
             print("Insufficient fund")
             continue
 
-        if bet <= 5:
+        if bet <= 4:
             print("Bet must be higher than RM5")
             continue
 
@@ -66,6 +66,8 @@ def main():
         row = spin_row()
         print("Spinning......\n")
         print_row(row)
+
+        payout = get_payout(row, bet)
 
 if __name__ == '__main__':
     main()
