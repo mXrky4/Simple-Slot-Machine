@@ -39,9 +39,10 @@ def main():
     print("******************************************")
     print("Welcome to the Python Slots!")
     print("Symbols: 😁 - Smiley, 😎 - Cool, 😆 - Excited, 😏 - Smirk, 🤑 - Moneyface")
-    print("******************************************")
+    
 
     while balance > 0:
+        print("******************************************")
         print(f"Current balance: RM{balance}")
 
         bet =input("Make a bet amount (minimum RM5): ")
@@ -82,7 +83,8 @@ def main():
 
         if play_again != 'Y':
             break
-    
+    print("******************************************")
     print(f"Game Over! Your final balance is {balance}")
+    print("******************************************")
 if __name__ == '__main__':
     main()
