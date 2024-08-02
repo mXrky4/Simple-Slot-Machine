@@ -1,15 +1,27 @@
 # Function Generates the row of the slot machine symbols
 def spin_row():
-    symbols = ['😁', '😎', '😆', '😏', '🤑' ]
-    pass
+    #A list of symbols roll of slot machine
+    symbols = ['😁', '😎', '😆', '😏', '🤑']
+    return [random.choice(symbols), for_ in range(3)]
 
 # Function: Prints the row that easy to read
 def print_row():
     pass
 
 # Function: Calculate the payout based on the row and bet
-def get_payout():
-    pass
+def get_payout(row, bet):
+    #Creating a dictionary of row symbols and their value 
+    payouts = {
+        '😁':3, 
+        '😎':4,
+        '😆':5, 
+        '😏':10, 
+        '🤑':20
+    }
+    #If all row is equal or the same each other, get paid multiply by bets
+    if row[0] == row[1] == row[2]:
+        return bet * payouts.get(row[0], 0)
+    return 0
 
 
 
