@@ -49,8 +49,8 @@ def main():
             print("Insufficient fund")
             continue
 
-        if bet <= 0:
-            print("Bet must be greater than 0")
+        if bet <= 5:
+            print("Bet must be higher than RM5")
             continue
 
         balance -= bet
