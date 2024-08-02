@@ -1,8 +1,12 @@
+
+import random
+
 # Function Generates the row of the slot machine symbols
 def spin_row():
-    #A list of symbols roll of slot machine
+    # A list of symbols roll of slot machine
     symbols = ['😁', '😎', '😆', '😏', '🤑']
-    return [random.choice(symbols), for_ in range(3)]
+    # For every symbols, pick a random 3 symbols
+    return [random.choice(symbols) for _ in range(3)]
 
 # Function: Prints the row that easy to read
 def print_row():
@@ -54,6 +58,10 @@ def main():
             continue
 
         balance -= bet
+
+        # Turning row into a list
+        row = spin_row()
+        print(row)
 
 if __name__ == '__main__':
     main()
