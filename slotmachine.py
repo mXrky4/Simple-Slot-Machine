@@ -9,8 +9,9 @@ def spin_row():
     return [random.choice(symbols) for _ in range(3)]
 
 # Function: Prints the row that easy to read
-def print_row():
-    pass
+def print_row(row):
+    # Adding a string, which is a "|" in between the symbols output
+    print("|".join(row))
 
 # Function: Calculate the payout based on the row and bet
 def get_payout(row, bet):
@@ -61,7 +62,8 @@ def main():
 
         # Turning row into a list
         row = spin_row()
-        print(row)
+        print("Spinning......\n")
+        print_row(row)
 
 if __name__ == '__main__':
     main()
