@@ -26,7 +26,7 @@ def get_payout(row, bet):
 
 
 
-# Game start
+# Main program
 def main():
     balance= 100
     print("******************************************")
@@ -37,11 +37,23 @@ def main():
     while balance > 0:
         print(f"Current balance: RM{balance}")
 
-        bet =input("Make a bet (minimum RM5): ")
+        bet =input("Make a bet amount (minimum RM5): ")
 
         if not bet.isdigit():
             print("Please enter a valid number.")
+            continue #Reset the  main program
+
+        bet = int(bet)
+
+        if bet > balance:
+            print("Insufficient fund")
             continue
 
+        if bet <= 0:
+            print("Bet must be greater than 0")
+            continue
 
-main()
+        balance -= bet
+
+if __name__ == '__main__':
+    main()
