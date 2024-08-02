@@ -71,10 +71,16 @@ def main():
 
         if payout > 0:
             print(f"You won RM{payout} ")
+            print("******************************************")
         else:
             print("Sorry you lost this round")
+            print("******************************************")
 
         balance += payout
 
+        play_again = input("Do you want to spin again? (Y/N): ")
+
+        if play_again != 'Y':
+            break
 if __name__ == '__main__':
     main()
